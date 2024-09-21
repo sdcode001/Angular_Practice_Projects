@@ -1,0 +1,11 @@
+<main>
+  <app-learning-resources />
+
+  <hr />
+
+  <app-auth />
+
+  <p *appAuth="'admin'">Only Admin should see this!</p>
+  <p *appAuth="'user'">Only User should see this!</p>
+  <p *appAuth="'guest'">Only Guest should see this!</p>
+</main>

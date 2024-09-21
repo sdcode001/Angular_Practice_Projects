@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+    box-sizing: border-box;
+    width: auto;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: "poppins", sans-serif;
+    background: radial-gradient(circle at top left, #030305, #09080e);
+    color: #bcd3b2;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: auto;
+}

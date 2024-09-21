@@ -1,0 +1,28 @@
+@if(result.length==0){
+   <p>Enter Investment details to see the result</p>
+}@else {
+   <section id="output-section">
+      <table>
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Investment Value</th>
+                <th>Interest (Year)</th>
+                <th>Total Interest</th>
+                <th>Invested Capital</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(data of result; track data.year){
+                <tr>
+                    <th>{{data.year}}</th>
+                    <th>{{data.valueEndOfYear | currency:'INR'}}</th>
+                    <th>{{data.interest | currency:'INR'}}</th>
+                    <th>{{data.totalInterest | currency:'INR'}}</th>
+                    <th>{{data.totalAmountInvested | currency:'INR'}}</th>
+                </tr>
+            }
+        </tbody>
+      </table>
+   </section>
+}
