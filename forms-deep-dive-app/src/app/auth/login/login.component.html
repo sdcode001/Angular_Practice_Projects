@@ -1,0 +1,26 @@
+<form [formGroup]="form" (ngSubmit)="submitHandler()">
+  <h2>Login</h2>
+  
+  <div class="control-row">
+    <div class="control no-margin">
+      <label for="email">Email</label>
+      <input id="email" type="email" formControlName="email">
+    </div>
+
+    <div class="control no-margin">
+      <label for="password">Password</label>
+      <input id="password" type="password" formControlName="password"/>
+    </div>
+
+    <button class="button">Login</button>
+  </div>
+  
+  @if(form.controls.email.touched && form.controls.email.invalid && form.controls.email.dirty){
+    <P class="invalid-control">Invalid email entered. Please check your input!</P>
+  }
+
+  @if(form.controls.password.touched && form.controls.password.invalid && form.controls.password.dirty){
+    <P class="invalid-control">Invalid password entered. It must be at least 5 characters long and contain QuestionMark!</P>
+  }
+
+</form>
